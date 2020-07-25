@@ -134,6 +134,7 @@ p:last-child { margin-bottom: 0; }
     background: url(../img/brooke-lark-nTZOILVZuOg-unsplash.jpg) center top no-repeat; 
     min-height: 720px;
     position: relative;
+    background-size:100%;
 }
 .tm-banner-row { 
     position: relative;
