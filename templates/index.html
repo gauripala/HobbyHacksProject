@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Food Recipe Generator</title>
-<!-- 
-Journey Template 
-http://www.templatemo.com/tm-511-journey
--->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+    </style> 
+    <script src="https://kit.fontawesome.com/8107f2b612.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/bootstrap.min.css">                                    
-    <link rel="stylesheet" href="css/templatemo-style.css">                                  
+    <link rel="stylesheet" href="css/templatemo-style.css"> 
+    <link rel="stylesheet" href="style.css">                                 
 </head>
 
       <body>
@@ -58,89 +59,23 @@ http://www.templatemo.com/tm-511-journey
                         <div class="row tm-banner-row tm-banner-row-header">
                             <div class="col-xs-12">
                                 <div class="tm-banner-header">
-                                    <h1 class="text-uppercase tm-banner-title">Let's begin</h1>
+                                    <h1 class="text-uppercase tm-banner-title">Recipes</h1>
                                     <img src="img/dots-3.png" alt="Dots">
                                     <p class="tm-banner-subtitle">We assist you in reducing food waste.</p>
-                                    <a href="javascript:void(0)" class="tm-down-arrow-link"><i class="fa fa-2x fa-angle-down tm-down-arrow"></i></a>       
                                 </div>    
                             </div>  <!-- col-xs-12 -->                      
                         </div> <!-- row -->
-                        <div class="row tm-banner-row" id="tm-section-search">
+                        <div class ="wrapper">
+                            <input type="text" class="input" placeholder="Search Ingredient">
+		                        <div class="searchbtn">
+			                    <i class="fas fa-search"></i>
 
-                            <form action="index.html" method="get" class="tm-search-form tm-section-pad-2">
-                                <div class="form-row tm-search-form-row">                                
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="inputCity">Choose Your Destination</label>
-                                        <input name="destination" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-1">                                    
-                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-2">
-                                            <label for="inputRoom">How many rooms?</label>
-                                            <select name="room" class="form-control tm-select" id="inputRoom">
-                                                <option value="1" selected>1 Room</option>
-                                                <option value="2">2 Rooms</option>
-                                                <option value="3">3 Rooms</option>
-                                                <option value="4">4 Rooms</option>
-                                                <option value="5">5 Rooms</option>
-                                                <option value="6">6 Rooms</option>
-                                                <option value="7">7 Rooms</option>
-                                                <option value="8">8 Rooms</option>
-                                                <option value="9">9 Rooms</option>
-                                                <option value="10">10 Rooms</option>
-                                            </select>                                        
-                                        </div>
-                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">                                       
-                                            <label for="inputAdult">Adult</label>     
-                                            <select name="adult" class="form-control tm-select" id="inputAdult">
-                                                <option value="1" selected>1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                                <option value="10">10</option>
-                                            </select>                                        
-                                        </div>
-                                        <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
+		                        </div>
 
-                                            <label for="inputChildren">Children</label>                                            
-                                            <select name="children" class="form-control tm-select" id="inputChildren">
-                                            	<option value="0" selected>0</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                                <option value="3">3</option>
-                                                <option value="4">4</option>
-                                                <option value="5">5</option>
-                                                <option value="6">6</option>
-                                                <option value="7">7</option>
-                                                <option value="8">8</option>
-                                                <option value="9">9</option>
-                                            </select>                                        
-                                        </div>
-                                    </div>
-                                </div> <!-- form-row -->
-                                <div class="form-row tm-search-form-row">
-
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-                                        <label for="inputCheckIn">Check In Date</label>
-                                        <input name="check-in" type="text" class="form-control" id="inputCheckIn" placeholder="Check In">
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-3">
-                                        <label for="inputCheckOut">Check Out Date</label>
-                                        <input name="check-out" type="text" class="form-control" id="inputCheckOut" placeholder="Check Out">
-                                    </div>
-                                    <div class="form-group tm-form-group tm-form-group-pad tm-form-group-1">
-                                        <label for="btnSubmit">&nbsp;</label>
-                                        <button type="submit" class="btn btn-primary tm-btn tm-btn-search text-uppercase" id="btnSubmit">Check Availability</button>
-                                    </div>
-                                </div>                              
-                            </form>                             
-
+                        </div>
+                       
                         </div> <!-- row -->
-                        <div class="tm-banner-overlay"></div>
+                        
                     </div>  <!-- .container -->                   
                 </div>     <!-- .tm-container-outer -->                 
             </section>
@@ -158,7 +93,7 @@ http://www.templatemo.com/tm-511-journey
             </section>
 
             <footer class="tm-container-outer">
-                <p class="mb-0">Copyright © <span class="tm-current-year">2018</span> Hobby Hacks . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Template Mo</a></p>
+                <p class="mb-0">Copyright © <span class="tm-current-year">2020</span> Hobby Hacks . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Recipes</a></p>
                 <p class="mb-0"> Contact us: a123@gmail.com </p>
             </footer>
         </div>
