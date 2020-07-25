@@ -119,7 +119,7 @@ p:last-child { margin-bottom: 0; }
     letter-spacing: 1px;
 }
 
-.tm-banner-header { color: white; }
+.tm-banner-header { color: black; }
 .tm-banner-overlay {
     z-index: 1;
     height: 100%;
@@ -132,8 +132,9 @@ p:last-child { margin-bottom: 0; }
 }
 .tm-banner-bg {
     background: url(../img/brooke-lark-nTZOILVZuOg-unsplash.jpg) center top no-repeat; 
-    min-height: 720px;
+    min-height: 500px;
     position: relative;
+    background-size:100%;
 }
 .tm-banner-row { 
     position: relative;
