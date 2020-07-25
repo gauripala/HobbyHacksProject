@@ -131,10 +131,11 @@ p:last-child { margin-bottom: 0; }
     background: rgba(0, 0, 0, 0.7);
 }
 .tm-banner-bg {
-    background: url(../img/brooke-lark-nTZOILVZuOg-unsplash.jpg) center top no-repeat; 
+    background: url('../img/food-2.jpg') center top no-repeat; 
     min-height: 500px;
     position: relative;
     background-size:100%;
+    background-position: center;
 }
 .tm-banner-row { 
     position: relative;
