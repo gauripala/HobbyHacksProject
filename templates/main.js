@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
     const APIKEYMAIA = '65bdc424250f4e1fbb4c1a895ed40bf6'
+    //TODO make the ingredient dynamic based on what the user inputted
     var ingredient = 'apples'
     var search = document.getElementById("search")
     var results = document.getElementById("results")
 
+    //redirect to recipe page on click
+    function redirect(id) {
+        if (id !== undefined && id != null) {
+            window.location = '/results?recipe=' + id;
+        }
+    }
+
+
+    //makes api call looking for recipes for ingredient
     const searchForRecipes = async () => {
         //Actual api code commented out below, should not be used until we are further along
         //const response = await fetch(`https://api.spoonacular.com/recipes/findByIngredients?apiKey=${APIKEYMAIA}&ingredients=${ingredient},+flour,+sugar&number=2`);
@@ -15,14 +25,15 @@ document.addEventListener("DOMContentLoaded", function() {
         //add a div to container with recipe title
         if (jjson) {
             results.innerHTML = `<div>Recipes containing ${ingredient}:</div>`
-            let titles = jjson.map((recipe) => {
-                console.log(recipe.title)
-                results.innerHTML += `<span>${recipe.title} <img src= ${recipe.image}></span>`
+            jjson.map((recipe) => {
+                results.innerHTML += `<span id=${recipe.id}>${recipe.title} <img src= ${recipe.image}></span>`
+                var element = document.getElementById(`${recipe.id}`)
+                element.addEventListener('click', function(){redirect(`${recipe.id}`)})
             })
-
         }
     }
 
+    //when the search button is clicked, trigger searchForRecipes
     search.addEventListener('click', searchForRecipes)
 });
 
