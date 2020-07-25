@@ -1,6 +1,6 @@
-<!-- 	    
-Inspired from: Journey Template 	       
-http://www.templatemo.com/tm-511-journey	   
+<!--
+Inspired from: Journey Template
+http://www.templatemo.com/tm-511-journey
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -11,77 +11,79 @@ http://www.templatemo.com/tm-511-journey
     <title>Food Recipe Generator</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
-    </style> 
+    </style>
     <script src="https://kit.fontawesome.com/8107f2b612.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">                                    
-    <link rel="stylesheet" href="css/templatemo-style.css"> 
-    <link rel="stylesheet" href="style.css">                                 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
 </head>
 
-      <body>
-        <div class="tm-main-content" id="top">
-            <div class="tm-top-bar-bg"></div>    
-            <div class="tm-top-bar" id="tm-top-bar">
+<body>
+<div class="tm-main-content" id="top">
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="img/logo.png" alt="Site logo">
+                        Recipes
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-2">Top Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-3">Recommended Places</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-4">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+
+    <div class="tm-page-wrap mx-auto">
+        <section class="tm-banner">
+            <div class="tm-container-outer tm-banner-bg">
                 <div class="container">
-                    <div class="row">
-                        <nav class="navbar navbar-expand-lg narbar-light">
-                            <a class="navbar-brand mr-auto" href="#">
-                                <img src="img/logo.png" alt="Site logo">
-                                Recipes
-                            </a>
-                            <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
-                            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
-                                <ul class="navbar-nav ml-auto">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-2">Top Destinations</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-3">Recommended Places</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#tm-section-4">Contact Us</a>
-                                </li>
-                            </ul>
-                        </div>                            
-                    </nav>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- .tm-top-bar -->
 
-        <div class="tm-page-wrap mx-auto">
-            <section class="tm-banner">
-                <div class="tm-container-outer tm-banner-bg">
-                    <div class="container">
-
-                        <div class="row tm-banner-row tm-banner-row-header">
-                            <div class="col-xs-12">
-                                <div class="tm-banner-header">
-                                    <h1 class="text-uppercase tm-banner-title">Recipes</h1>
-                                  <!--   <img src="img/dots-3.png" alt="Dots"> -->
-                                    <p class="tm-banner-subtitle">We assist you in reducing food waste.</p>
-                                </div>    
-                            </div>  <!-- col-xs-12 -->                      
-                        </div> <!-- row -->
-                        <div class ="wrapper">
-                            <input type="text" class="input" placeholder="Search Ingredient">
-		                        <div class="searchbtn">
-			                    <i class="fas fa-search"></i>
-
-		                        </div>
+                    <div class="row tm-banner-row tm-banner-row-header">
+                        <div class="col-xs-12">
+                            <div class="tm-banner-header">
+                                <h1 class="text-uppercase tm-banner-title">Recipes</h1>
+                                <!--   <img src="img/dots-3.png" alt="Dots"> -->
+                                <p class="tm-banner-subtitle">We assist you in reducing food waste.</p>
+                            </div>
+                        </div>  <!-- col-xs-12 -->
+                    </div> <!-- row -->
+                    <div class ="wrapper">
+                        <input type="text" class="input" placeholder="Search Ingredient">
+                        <div id="search" class="searchbtn">
+                            <i class="fas fa-search"></i>
                         </div>
-                       
-                        </div> <!-- row -->
-                        
-                    </div>  <!-- .container -->                   
-                </div>     <!-- .tm-container-outer -->                 
-            </section>
+                    </div>
 
+                </div> <!-- row -->
+
+            </div>  <!-- .container -->
+    </section>
+    <div id="results"></div>
+
+<<<<<<< HEAD
             <section class="p-5 tm-container-outer tm-bg-gray">            
                 <div class="container">
                     <div class="row">
@@ -93,10 +95,25 @@ http://www.templatemo.com/tm-511-journey
                     </div>
                 </div>            
             </section>
+=======
+        <section class="p-5 tm-container-outer tm-bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 mx-auto tm-about-text-wrap text-center">
+                    <h2 class="text-uppercase mb-4">Reducing <strong>Food Waste</strong> is our priority</h2>
+                    <p class="mb-4">We are a team of ... Nullam auctor, sapien sit amet lacinia euismod, lorem magna lobortis massa, in tincidunt mi metus quis lectus. Duis nec lobortis velit. Vivamus id magna vulputate, tempor ante eget, tempus augue. Maecenas ultricies neque magna.</p>
+>>>>>>> 21b5f2dbd113e27dc33c1f6a9f33543d7fdc53d1
 
-            <footer class="tm-container-outer">
-                <p class="mb-0">Copyright © <span class="tm-current-year">2020</span> Hobby Hacks . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Recipes</a></p>
-                <p class="mb-0"> Contact us: a123@gmail.com </p>
-            </footer>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <footer class="tm-container-outer">
+        <p class="mb-0">Copyright © <span class="tm-current-year">2020</span> Hobby Hacks . Designed by <a rel="nofollow" href="http://www.google.com/+templatemo" target="_parent">Recipes</a></p>
+        <p class="mb-0"> Contact us: a123@gmail.com </p>
+    </footer>
+</div>
+</div>
+</body>
+</html>
