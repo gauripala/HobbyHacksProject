@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //redirect to recipe page on click
     function redirect(id) {
         if (id !== undefined && id != null) {
-            window.location = '/results?recipe=' + id;
+            window.location = `/HobbyHacksProject/templates/results.html?recipe=${id}`
         }
     }
 
