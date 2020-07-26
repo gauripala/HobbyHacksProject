@@ -29,6 +29,8 @@ Please download the VS Code Extension: Live Server by the publisher: "Ritwick De
 
 Future Updates: 
 
+We have a lot of things that we need to work on since we all were not quite familiar with the technologies that were used. 
+
     1) Add more functionality with finding foodbanks
     
     2) Improve the user interface of the entire app for an enhanced user experience 
