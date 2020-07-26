@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
             json.map((recipe) => {
                 var element = document.createElement('span');
                 element.id = recipe.id;
-                element.innerHTML = ` <div id="outer"> ${recipe.title} </div> <div id = "images"> <img src= ${recipe.image} alt="Food Image"> </div>`
+                element.innerHTML = `<div id="outer" style="color:orange"> ${recipe.title} </div> <div id = "images"> <img src= ${recipe.image} alt="Food Image"> </div>` 
               //  document.getElementById("outer").style.color = 'orange';
                 sheet.innerHTML = "#images {margin: auto; width: 300px; margin-top: 10px; margin-bottom: 20px; margin-left: auto; margin-right: auto;}";
                 document.body.appendChild(sheet);

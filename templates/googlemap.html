@@ -1,15 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel ="stylesheet" href = "googlemapstyle.css">
+<html>
+  <head>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Food Donations</title>
+    <link rel="stylesheet" href="googlemapstyle.css">
+    <style>
+        /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 50%;  /* The width is the width of the web page */
+       }
+    </style>
+      
 
-</head>
-<body>
+  </head>
+  <body>
     <div class="tm-top-bar-bg"></div>
     <div class="tm-top-bar" id="tm-top-bar">
         <div class="container">
@@ -17,7 +22,8 @@
                 <nav class="navbar navbar-expand-lg narbar-light">
                     <a class="navbar-brand mr-auto" href="index.html">
                         <img src="img/logo.png" alt="Site logo">
-                        Recipes
+                        Recipes 
+                        
                     </a>
                     <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -25,7 +31,7 @@
                     <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
                         <ul class="navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a class="nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link active" href="index.html">Home <span class="sr-only">Home</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="googlemap.html">Food Donations</a>
@@ -40,7 +46,51 @@
         </div> <!-- container -->
     </div> <!-- .tm-top-bar -->
     <div class = "title-con">
-        <h1>Food Donations</h1>
+        <h1>About Us</h1>
     </div>
+    <h3>Food Bank Locations</h3>
+    <!--The div element for the map -->
+    
+    <button onclick="getLocation()">Click To Find Food Banks Near You</button>
 
-</body>
+    <p id="demo"></p>
+    <div id="map"></div>
+    <script>
+        var x = document.getElementById("demo");
+       
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(initMap);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+
+// Initialize and add the map
+function initMap(position) {
+    //x.innerHTML = "Latitude: " + position.coords.latitude + 
+  //"<br>Longitude: " + position.coords.longitude;
+  // The location of Uluru
+  var uluru = {lat: position.coords.latitude, lng: position.coords.longitude};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 8, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhTMD486voQcUXXyTVABUVMLwBDY5jo3k&callback=initMap">
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
