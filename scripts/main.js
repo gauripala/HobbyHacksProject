@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
             recipe.missedIngredients.map(ingred => {ingredients.push(ingred.originalString)})
             recipe.usedIngredients.map(ingred => {ingredients.push(ingred.originalString)})
             ingredients = ingredients.toString()
-            window.location = `/HobbyHacksProject/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
-            //  window.location = `/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
+           // window.location = `/HobbyHacksProject/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
+             window.location = `/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
         }
     }
 
