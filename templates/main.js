@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-
     //makes api call looking for recipes for ingredient
     const searchForRecipes = async () => {
         let ingredient = document.getElementById("ingredientField").value
@@ -31,12 +30,21 @@ document.addEventListener("DOMContentLoaded", function() {
 
         //add html to page
         if (json) {
-            results.innerHTML = `<div>Recipes containing ${ingredient}:</div>`
+            var sheet = document.createElement('style')
+            results.innerHTML = `<div id="title"> List of Recipes: </div>`
+            document.getElementById('title').style.color = 'black';
+            document.getElementById('title').style.fontSize = 'xx-large';
+            document.getElementById('title').style.textAlign = 'center';
+            document.getElementById('title').style.marginTop = '30px';
+
             //for each recipe in the json response create a new span with the recipe title and image inside
             json.map((recipe) => {
                 var element = document.createElement('span');
                 element.id = recipe.id;
-                element.innerHTML = `${recipe.title}<img src= ${recipe.image}>`
+                element.innerHTML = ` <div id="outer"> ${recipe.title} </div> <div id = "images"> <img src= ${recipe.image} alt="Food Image"> </div>`
+              //  document.getElementById("outer").style.color = 'orange';
+                sheet.innerHTML = "#images {margin: auto; width: 300px; margin-top: 10px; margin-bottom: 20px; margin-left: auto; margin-right: auto;}";
+                document.body.appendChild(sheet);
                 element.addEventListener('click', () => {redirect(recipe)})
                 results.appendChild(element)
             })
