@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
             recipe.usedIngredients.map(ingred => {ingredients.push(ingred.originalString)})
             ingredients = ingredients.toString()
             window.location = `/HobbyHacksProject/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
+            //  window.location = `/templates/results.html?recipe=${recipe.id}&name=${recipe.title}&ingredients=${ingredients}`
         }
     }
 
@@ -41,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
             json.map((recipe) => {
                 var element = document.createElement('span');
                 element.id = recipe.id;
-                element.innerHTML = ` <div id="outer"> ${recipe.title} </div> <div id = "images"> <img src= ${recipe.image} alt="Food Image"> </div>`
+                element.innerHTML = ` <div id="outer" style="color:green; margin-left: 625px; "> ${recipe.title} </div> <div id = "images"> <img src= ${recipe.image} alt="Food Image"> </div>`
               //  document.getElementById("outer").style.color = 'orange';
                 sheet.innerHTML = "#images {margin: auto; width: 300px; margin-top: 10px; margin-bottom: 20px; margin-left: auto; margin-right: auto;}";
                 document.body.appendChild(sheet);
