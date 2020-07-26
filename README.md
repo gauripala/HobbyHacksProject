@@ -1,4 +1,4 @@
-# HobbyHacksProject
+# ZeroWasted
 Description: 
 
 As avid chefs, we see many foods constantly being thrown away simply because people do not know what to do with it. With the use of this web app named "ZeroWasted", everyone has access to a vast amount of recipes that can help cut down food waste. With one click of a button, you can contribute to reducing the amount of food waste in the world! If you are not interested in cooking, then you could even donate to a nearby Food Bank in your area. 
