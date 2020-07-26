@@ -1,10 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Results</title>
+    <link rel="stylesheet" href="style2.css">
 </head>
 <body>
-
+    <div class="tm-top-bar-bg"></div>
+    <div class="tm-top-bar" id="tm-top-bar">
+        <div class="container">
+            <div class="row">
+                <nav class="navbar navbar-expand-lg narbar-light">
+                    <a class="navbar-brand mr-auto" href="#">
+                        <img src="img/logo.png" alt="Site logo">
+                        Recipes
+                    </a>
+                    <button type="button" id="nav-toggle" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#top">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-2">Top Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-3">Recommended Places</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#tm-section-4">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div> <!-- row -->
+        </div> <!-- container -->
+    </div> <!-- .tm-top-bar -->
+    <div class = "title-con">
+        <h1>Recipe Title</h1>
+    </div>
+    <div class = "bottom-con">
+        <div class = "ing-con">
+            <h3><u>Ingredients:</u></h3>
+        </div>
+        <div class = "instructions-con">
+            <h3><u>Instructions:</u></h3>
+        </div>
+    </div>
 </body>
 </html>
